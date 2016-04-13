@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    
+      <string name="app_name">美のApp</string>
+    <string name="sun_refresh_style">Sun refresh style</string>
+    <string name="jet_refresh_style">Jet refresh style</string>
+    <string name="polite_message">Wait a moment please. Breathe deeply and watch beautiful animation.</string>
+    <string name="trip_to_india">脸部加强 </string>
+    <string name="trip_to_italy">皮肤美白</string>
+    <string name="trip_to_indonesia">年龄回溯</string>
+
+</resources>
