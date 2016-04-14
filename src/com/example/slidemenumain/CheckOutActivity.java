@@ -29,7 +29,7 @@ public class CheckOutActivity extends AppCompatActivity  {
         setContentView(R.layout.check_out);
         Intent intent = getIntent();        
         ProductSN = intent.getStringExtra("ProductSN");
-        Price = intent.getIntExtra("Price", -0);
+        Price = intent.getIntExtra("Price", 0);
         
         checkOutGO();
         
@@ -46,9 +46,9 @@ public class CheckOutActivity extends AppCompatActivity  {
     	
         Amount = Price * Quantity;
 		
-		WebView webView = new WebView(this);
-		webView.loadUrl("http://nonsense.hol.es/buy.php?ProductSN=" + ProductSN + "&Quantity=" + Integer.toString(Quantity) +"&Price=" + Integer.toString(Price) + "&Amount=" + Integer.toString(Amount) + "&OrderName=" + OrderName + "&OrderAddress=" +OrderAddress + "&OrderPhone=" + OrderPhone + "&ConsigneeName=" + ConsigneeName + "&ConsigneeAddress=" + ConsigneeAddress + "&ConsigneePhone=" + ConsigneePhone + "&DeliverTime=" + DeliverTime);
-		setContentView(webView);
+//		WebView webView = new WebView(this);
+//		webView.loadUrl("http://nonsense.hol.es/buy.php?ProductSN=" + ProductSN + "&Quantity=" + Integer.toString(Quantity) +"&Price=" + Integer.toString(Price) + "&Amount=" + Integer.toString(Amount) + "&OrderName=" + OrderName + "&OrderAddress=" +OrderAddress + "&OrderPhone=" + OrderPhone + "&ConsigneeName=" + ConsigneeName + "&ConsigneeAddress=" + ConsigneeAddress + "&ConsigneePhone=" + ConsigneePhone + "&DeliverTime=" + DeliverTime);
+////		setContentView(webView);
     }
 
 

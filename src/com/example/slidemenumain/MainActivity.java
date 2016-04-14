@@ -3,6 +3,8 @@ package com.example.slidemenumain;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Color;
@@ -13,8 +15,10 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.LinearLayout;
@@ -29,7 +33,8 @@ import yalantis.com.sidemenu.util.ViewAnimator;
  
  
 public class MainActivity extends AppCompatActivity  implements ViewAnimator.ViewAnimatorListener {
-    private DrawerLayout drawerLayout;
+    private static Context context;
+	private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle drawerToggle;
     private List<SlideMenuItem> list = new ArrayList<>();
     private ContentFragment contentFragment;
@@ -60,6 +65,19 @@ public class MainActivity extends AppCompatActivity  implements ViewAnimator.Vie
         setActionBar();
         createMenuList();
         viewAnimator = new ViewAnimator<>(this, list, contentFragment, drawerLayout, this);
+        
+        
+   
+//        MainActivity.context = getApplicationContext();
+//        DisplayMetrics displaymetrics = new DisplayMetrics();
+//        getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+//        (((Activity) MainActivity.context)).getWindowManager()
+//        .getDefaultDisplay()
+//        .getMetrics(displaymetrics);
+//     
+//        int scrennHeight = displaymetrics.heightPixels;
+//        int width = displaymetrics.widthPixels;
+//    
         
         
         
@@ -151,7 +169,7 @@ public class MainActivity extends AppCompatActivity  implements ViewAnimator.Vie
         }
         switch (item.getItemId()) {
             case R.id.action_settings:
-              Intent intent = new Intent(this, PullToRefreshActivity.class);
+              Intent intent = new Intent(this, CheckOutActivity.class);
 //            	intent.setClass();
             	startActivity(intent);
                 return true;
