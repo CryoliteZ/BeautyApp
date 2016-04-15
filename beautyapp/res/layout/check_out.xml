@@ -15,8 +15,8 @@
             android:id="@+id/customerIDimg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-               android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_face_black_24dp" />
@@ -54,6 +54,7 @@
             android:id="@+id/customerPhoneimg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
@@ -93,6 +94,7 @@
             android:id="@+id/customerAddressimg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
@@ -112,7 +114,7 @@
 
         <EditText
             android:id="@+id/customerAddressEdit"
-            android:layout_width="300dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:imeOptions="actionDone"
             android:inputType="text" >
@@ -131,6 +133,7 @@
             android:id="@+id/consigneeIDimg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
@@ -162,7 +165,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="同上"
-            android:textSize="20sp" />
+            android:textSize="10sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -177,6 +180,7 @@
             android:id="@+id/consigneePhoneimg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
@@ -208,7 +212,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="同上"
-            android:textSize="20sp" />
+            android:textSize="10sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -223,6 +227,7 @@
             android:id="@+id/consigneeAddressimg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
@@ -242,7 +247,7 @@
 
         <EditText
             android:id="@+id/consigneeAddressEdit"
-            android:layout_width="300dp"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:imeOptions="actionDone"
             android:inputType="text"
@@ -251,12 +256,13 @@
 
         <CheckBox
             android:id="@+id/sameAddress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="10px"
+            android:layout_height="10px"
             android:text="同上"
-            android:textSize="20sp" />
+            android:textSize="10sp" />
     </LinearLayout>
-     <LinearLayout
+
+    <LinearLayout
         android:id="@+id/quantity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -268,6 +274,7 @@
             android:id="@+id/quantityimg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
@@ -290,25 +297,57 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:imeOptions="actionDone"
+            android:text="0"
             android:inputType="number"
             android:singleLine="true" >
         </EditText>
-       
+        
+        <ImageView
+            android:id="@+id/priceimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_monetization_on_black_24dp" />
+
+        <TextView
+            android:id="@+id/priceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="60dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="价钱"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/priceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="0"
+            android:textSize="14sp" />
     </LinearLayout>
-    
 
     <Button
         android:id="@+id/submitBuy"
-        android:layout_margin="15dp"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"        
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
         android:text="Submit"
         android:textColor="#000" />
 
     <WebView
         android:id="@+id/unionPayWebView"
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
