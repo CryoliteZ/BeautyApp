@@ -198,25 +198,25 @@ public class MainActivity extends AppCompatActivity  implements ViewAnimator.Vie
             case ContentFragment.CLOSE:
                 return screenShotable;
             case ContentFragment.BUILDING:
-            	newRes = R.drawable.beauty_icon;
+            	newRes = R.drawable.img0;
             	break;
             case ContentFragment.BOOK:
-            	newRes = R.drawable.content_films;
+            	newRes = R.drawable.img1;
             	break;
             case ContentFragment.PAINT:
-            	newRes = R.drawable.content_music;
+            	newRes = R.drawable.img2;
             	break;
             case ContentFragment.CASE:
-            	newRes = R.drawable.content_films;
+            	newRes = R.drawable.img3;
             	break;
             case ContentFragment.SHOP:
-            	newRes = R.drawable.content_films;
+            	newRes = R.drawable.img4;
             	break;
             case ContentFragment.PARTY:
-            	newRes = R.drawable.content_films;
+            	newRes = R.drawable.img5;
             	break;
             case ContentFragment.MOVIE:
-            	newRes = R.drawable.content_films;
+            	newRes = R.drawable.img6;
             	break;
                 
         }

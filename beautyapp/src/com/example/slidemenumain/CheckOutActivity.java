@@ -1,13 +1,15 @@
 package com.example.slidemenumain;
 
+import java.net.URLEncoder;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.View.OnClickListener;
+import android.view.WindowManager;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -44,6 +46,7 @@ public class CheckOutActivity extends AppCompatActivity {
 		Intent intent = getIntent();
 		ProductSN = intent.getStringExtra("ProductSN");
 		Price = intent.getIntExtra("Price", 0);
+		
 
 		// Prevent keypad auto appear
 		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
@@ -68,27 +71,28 @@ public class CheckOutActivity extends AppCompatActivity {
 		consigneePhoneEdit.setText((new SettingsManager(this)).getConsigneeAddress());
 		consigneeAddressEdit.setText((new SettingsManager(this)).getConsigneePhone());
 		
-		TextWatcher watcher= new TextWatcher() {
-			
-			@Override
-			public void afterTextChanged(Editable s) {
-				if(quantityEdit.getText().toString()!= ""){
-					Amount = Integer.parseInt(quantityEdit.getText().toString()) * Price ;
-					priceValue.setText(Integer.toString(Amount));
-				}
-				
-			}
-	      
-	        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-	              //Do something or nothing.                
-	        }
-	        public void onTextChanged(CharSequence s, int start, int before, int count) {
-	            //Do something or nothing
-	        }
-			
-	    };
+//		TextWatcher watcher= new TextWatcher() {
+//			
+//			@Override
+//			public void afterTextChanged(Editable s) {
+//					Quantity = Integer.parseInt(quantityEdit.getText().toString());
+//					Amount =  Quantity* Price ;
+//					priceValue.setText(Integer.toString(Amount));
+//				
+//				
+//			}
+//	      
+//	        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//	              //Do something or nothing.                
+//	        }
+//	        public void onTextChanged(CharSequence s, int start, int before, int count) {
+//	            //Do something or nothing
+//	        }
+//			
+//	    };
 
-	    quantityEdit.addTextChangedListener(watcher);
+		priceValue.setText(Integer.toString(Price));
+//	    quantityEdit.addTextChangedListener(watcher);
 		
 		sameID.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 		       @Override
@@ -155,14 +159,26 @@ public class CheckOutActivity extends AppCompatActivity {
 		m.setConsigneePhone(ConsigneePhone);
 
 		Amount = Price * Quantity;
-
+		
+//		WebView webView = new WebView(this);
 		WebView webView = (WebView) findViewById(R.id.unionPayWebView);
-		webView.loadUrl("http://nonsense.hol.es/buy.php?ProductSN=" + ProductSN + "&Quantity="
-				+ Integer.toString(Quantity) + "&Price=" + Integer.toString(Price) + "&Amount="
-				+ Integer.toString(Amount) + "&OrderName=" + OrderName + "&OrderAddress=" + OrderAddress
-				+ "&OrderPhone=" + OrderPhone + "&ConsigneeName=" + ConsigneeName + "&ConsigneeAddress="
-				+ ConsigneeAddress + "&ConsigneePhone=" + ConsigneePhone + "&DeliverTime=" + DeliverTime);
-		// setContentView(webView);
+		StringBuffer buffer=new StringBuffer("http://nonsense.hol.es/buy.php?");
+		buffer.append("ProductSN="+URLEncoder.encode(ProductSN));
+		buffer.append("&Quantity="+URLEncoder.encode(Integer.toString(Quantity)));
+		buffer.append("&Price="+URLEncoder.encode(Integer.toString(Price)));
+		buffer.append("&Amount="+Integer.toString(Amount) );
+		buffer.append("&OrderName="+URLEncoder.encode(OrderName));
+		buffer.append("&OrderAddress="+URLEncoder.encode(OrderAddress));
+		buffer.append("&OrderPhone="+URLEncoder.encode(OrderPhone));
+		buffer.append("&ConsigneeName="+URLEncoder.encode(ConsigneeName));
+		buffer.append("&ConsigneeAddress="+URLEncoder.encode(ConsigneeAddress));
+		buffer.append("&ConsigneePhone="+URLEncoder.encode(ConsigneePhone));
+		buffer.append("&DeliverTime="+URLEncoder.encode(DeliverTime));
+		
+		webView.loadUrl(buffer.toString());
+
+
+	
 	}
 
 }
