@@ -20,11 +20,12 @@
             android:src="@drawable/content_films" />
         
         <Button
-            android:id="@+id/btn"
+            android:id="@+id/buyBtn"
             android:layout_centerInParent="true" 
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"           
-            android:text="Hello WOrld" />
+            android:layout_height="50dp"
+            android:layout_gravity="bottom|end"         
+            android:text="一键下单" />
       
     </FrameLayout>
 

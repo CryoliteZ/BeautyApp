@@ -73,19 +73,19 @@ public class SettingsManager {
 		return this.userInfo.getString("OrderName", "No name");
 	}
 	public String getOrderAddress() {
-		return this.userInfo.getString("OrderAddress", "No name");
+		return this.userInfo.getString("OrderAddress", "No Address");
 	}
 	public String getOrderPhone() {
-		return this.userInfo.getString("OrderPhone", "No name");
+		return this.userInfo.getString("OrderPhone", "No Phone");
 	}
 	public String getConsigneeName() {
-		return this.userInfo.getString("ConsigneeName", "No name");
+		return this.userInfo.getString("ConsigneeName", "No Cname");
 	}
 	public String getConsigneeAddress() {
-		return this.userInfo.getString("ConsigneeAddress", "No name");
+		return this.userInfo.getString("ConsigneeAddress", "No CAddress");
 	}
 	public String getConsigneePhone() {
-		return this.userInfo.getString("ConsigneePhone", "No name");
+		return this.userInfo.getString("ConsigneePhone", "No CPhone");
 	}
 
 

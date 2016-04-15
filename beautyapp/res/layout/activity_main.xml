@@ -29,9 +29,8 @@
             android:layout_height="wrap_content"
             android:background="#212121"
             android:minHeight="?attr/actionBarSize"
-               app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-         />
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
     </io.codetail.widget.RevealFrameLayout>
 
     <ScrollView
@@ -50,5 +49,6 @@
             android:orientation="vertical" >
         </LinearLayout>
     </ScrollView>
+
 
 </android.support.v4.widget.DrawerLayout>

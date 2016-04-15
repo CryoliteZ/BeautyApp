@@ -222,7 +222,7 @@ public class ContentFragment extends Fragment implements ScreenShotable {
 //        mImageView2.setFocusable(true);
 //        mImageView2.setImageResource(R.drawable.beauty_icon);
 //        
-        Button btn = (Button)rootView.findViewById(R.id.btn);
+        Button btn = (Button)rootView.findViewById(R.id.buyBtn);
         btn.setOnClickListener(new OnClickListener(){
 
 			@Override
