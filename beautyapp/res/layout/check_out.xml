@@ -31,7 +31,7 @@
             android:focusableInTouchMode="true"
             android:gravity="center"
             android:singleLine="true"
-            android:text="单价"
+            android:text="数量"
             android:textSize="12sp" />
 
         <EditText
@@ -63,7 +63,7 @@
             android:focusableInTouchMode="true"
             android:gravity="center"
             android:singleLine="true"
-            android:text="价钱"
+            android:text="单价"
             android:textSize="12sp" />
         <TextView
             android:id="@+id/priceValue"
@@ -329,8 +329,8 @@
 
         <CheckBox
             android:id="@+id/sameAddress"
-            android:layout_width="10px"
-            android:layout_height="10px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="同上"
             android:textSize="10sp" />
     </LinearLayout>

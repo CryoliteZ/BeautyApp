@@ -3,6 +3,7 @@ package com.example.slidemenumain;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -13,12 +14,12 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 import io.codetail.animation.SupportAnimator;
 import io.codetail.animation.ViewAnimationUtils;
 import yalantis.com.sidemenu.interfaces.Resourceble;
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity  implements ViewAnimator.Vie
     private List<SlideMenuItem> list = new ArrayList<>();
     private ContentFragment contentFragment;
     private ViewAnimator viewAnimator;
-    private int res = R.drawable.content_music;
+    private int res = R.drawable.small_dimen;
     private LinearLayout linearLayout;
 
 
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity  implements ViewAnimator.Vie
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        contentFragment = ContentFragment.newInstance(R.drawable.content_music, ContentFragment.BUILDING);
+        contentFragment = ContentFragment.newInstance(R.drawable.small_dimen, ContentFragment.BUILDING);
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.content_frame, contentFragment)
                 .commit();
@@ -72,13 +73,9 @@ public class MainActivity extends AppCompatActivity  implements ViewAnimator.Vie
 //        .getMetrics(displaymetrics);
 //     
 //        int scrennHeight = displaymetrics.heightPixels;
-//        int width = displaymetrics.widthPixels;
-//    
-        
-        
-        
-//        Intent intent = new Intent(this, PullToRefreshActivity.class);
-//    	startActivity(intent);
+//        int width = displaymetrics.widthPixels;////    
+       
+
     	
     	
     	
@@ -192,31 +189,31 @@ public class MainActivity extends AppCompatActivity  implements ViewAnimator.Vie
 
     @Override
     public ScreenShotable onSwitch(Resourceble slideMenuItem, ScreenShotable screenShotable, int position) {
-    	Toast.makeText(this , Integer.toString(position) ,Toast.LENGTH_LONG).show();
-    	int newRes = R.drawable.content_music;
+//    	Toast.makeText(this , Integer.toString(position) ,Toast.LENGTH_LONG).show();
+    	int newRes = R.drawable.small_dimen;
         switch (slideMenuItem.getName()) {
             case ContentFragment.CLOSE:
                 return screenShotable;
             case ContentFragment.BUILDING:
-            	newRes = R.drawable.img0;
-            	break;
-            case ContentFragment.BOOK:
             	newRes = R.drawable.img1;
             	break;
-            case ContentFragment.PAINT:
+            case ContentFragment.BOOK:
             	newRes = R.drawable.img2;
             	break;
-            case ContentFragment.CASE:
+            case ContentFragment.PAINT:
             	newRes = R.drawable.img3;
             	break;
-            case ContentFragment.SHOP:
+            case ContentFragment.CASE:
             	newRes = R.drawable.img4;
             	break;
-            case ContentFragment.PARTY:
+            case ContentFragment.SHOP:
             	newRes = R.drawable.img5;
             	break;
-            case ContentFragment.MOVIE:
+            case ContentFragment.PARTY:
             	newRes = R.drawable.img6;
+            	break;
+            case ContentFragment.MOVIE:
+            	newRes = R.drawable.img7;
             	break;
                 
         }

@@ -31,6 +31,43 @@ public class SettingsManager {
 	
 
 	/* setters */
+	
+	/* setters */
+
+
+	public void setAge(int age) {
+		SharedPreferences.Editor editor = userInfo.edit();
+		editor.putInt("age", age);
+		editor.commit();
+	}
+
+	public void setAge(String age) {
+		SharedPreferences.Editor editor = userInfo.edit();
+		try {
+			editor.putInt("age", Integer.parseInt(age));
+		} catch (Exception e) {
+		}
+		;
+		editor.commit();
+	}
+
+	/* gender (1 for male, 2 for female, 3 for others) */
+	public void setGender(int gender) {
+		SharedPreferences.Editor editor = userInfo.edit();
+		editor.putInt("gender", gender);
+		editor.commit();
+	}
+
+	public void setGender(String gender) {
+		SharedPreferences.Editor editor = userInfo.edit();
+		try {
+			editor.putInt("gender", Integer.parseInt(gender));
+		} catch (Exception x) {
+		}
+		;
+		editor.commit();	}
+
+	
 
 	public void setOrderName(String name) {
 		SharedPreferences.Editor editor = userInfo.edit();
@@ -67,7 +104,15 @@ public class SettingsManager {
 
 
 
-	/* getters */
+	/* getters */	
+
+	public int getAge() {
+		return this.userInfo.getInt("age", 0);
+	}
+
+	public int getGender() {
+		return this.userInfo.getInt("gender", 0);	}
+	
 
 	public String getOrderName() {
 		return this.userInfo.getString("OrderName", "No name");

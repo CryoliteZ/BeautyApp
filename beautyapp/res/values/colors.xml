@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="saffron">#F1B136</color>
-    <color name="eggplant">#03A679</color>
-    <color name="sienna">#EB6460</color>
+    <color name="saffron">#006064</color>
+    <color name="eggplant">#4FC3F7</color>
+    <color name="sienna">#FF80AB</color>
     <color name="white">#ffffff</color>
     <color name="background">#070a0f</color>
     <color name="fab">#ce2335</color>

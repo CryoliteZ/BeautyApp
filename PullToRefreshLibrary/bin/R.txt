@@ -413,7 +413,8 @@ int drawable beauty_icon_2 0x7f02003d
 int drawable clouds_center 0x7f02003e
 int drawable clouds_left 0x7f02003f
 int drawable clouds_right 0x7f020040
-int drawable notification_template_icon_bg 0x7f020041
+int drawable notification_template_icon_bg 0x7f020042
+int drawable rita_icon_small 0x7f020041
 int id action0 0x7f09004f
 int id action_bar 0x7f090040
 int id action_bar_activity_content 0x7f090003

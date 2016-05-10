@@ -228,8 +228,7 @@ public class ContentFragment extends Fragment implements ScreenShotable {
 			@Override
 			public void onClick(View v) {
 				gogoro();
-				Toast.makeText(getActivity() , Integer.toString(res) ,Toast.LENGTH_LONG).show();
-			    
+//				Toast.makeText(getActivity() , Integer.toString(res) ,Toast.LENGTH_LONG).show();		    
 				
 			}
         	
@@ -299,4 +298,3 @@ public class ContentFragment extends Fragment implements ScreenShotable {
         return bitmap;
     }
 }
-

@@ -62,9 +62,17 @@ public class PullToRefreshActivity extends AppCompatActivity {
 
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-		        Intent intent = new Intent(PullToRefreshActivity.this, MainActivity.class);
-		    	startActivity(intent);
+				switch(position){
+				case 0:
+			        Intent intent = new Intent(PullToRefreshActivity.this, MainActivity.class);
+			    	startActivity(intent);
+			    	break;
+			    case 2:
+			    	Intent intent2 = new Intent(PullToRefreshActivity.this, SettingActivity.class);
+				    startActivity(intent2);
+				    break;
+				}
+			
 
 			}
 
