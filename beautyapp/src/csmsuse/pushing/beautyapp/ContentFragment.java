@@ -1,4 +1,6 @@
-package com.example.slidemenumain;
+package csmsuse.pushing.beautyapp;
+
+import com.example.slidemenumain.R;
 
 import android.content.Intent;
 import android.graphics.Bitmap;

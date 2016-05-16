@@ -1,7 +1,9 @@
 
-package com.example.slidemenumain;
+package csmsuse.pushing.beautyapp;
 
 import java.net.URLEncoder;
+
+import com.example.slidemenumain.R;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -146,7 +148,7 @@ public class CheckOutActivity extends AppCompatActivity {
 
 		String tmpQuantity = quantityEdit.getText().toString();
 		if (tmpQuantity.isEmpty()) {
-			Toast.makeText(getApplicationContext(), "è¯·é”®å…¥æ•°é‡", Toast.LENGTH_SHORT).show();
+			Toast.makeText(getApplicationContext(), "è¯·é”®?…¥?•°???", Toast.LENGTH_SHORT).show();
 			return;
 		}
 		Quantity = Integer.parseInt(quantityEdit.getText().toString());

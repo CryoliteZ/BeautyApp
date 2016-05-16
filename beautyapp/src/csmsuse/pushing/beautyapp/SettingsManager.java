@@ -1,4 +1,4 @@
-package com.example.slidemenumain;
+package csmsuse.pushing.beautyapp;
 
 import java.util.ArrayList;
 import java.util.Map;

@@ -1,7 +1,9 @@
-package com.example.slidemenumain;
+package csmsuse.pushing.beautyapp;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.example.slidemenumain.R;
 
 import android.app.Activity;
 import android.content.Context;
@@ -29,7 +31,7 @@ import yalantis.com.sidemenu.util.ViewAnimator;
  
  
  
-public class MainActivity extends AppCompatActivity  implements ViewAnimator.ViewAnimatorListener {
+public class MerchandiseActivity extends AppCompatActivity  implements ViewAnimator.ViewAnimatorListener {
     private static Context context;
 	private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle drawerToggle;

@@ -1,10 +1,11 @@
-package com.example.slidemenumain;
+package csmsuse.pushing.beautyapp;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.example.slidemenumain.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;

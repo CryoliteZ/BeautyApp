@@ -23,7 +23,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppDarkTheme" >
         <activity
-            android:name="com.example.slidemenumain.PullToRefreshActivity"
+            android:name="csmsuse.pushing.beautyapp.MainActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name" >
             <intent-filter>
@@ -34,18 +34,18 @@
         </activity>
         <activity
             android:theme="@style/AppTheme"
-            android:name="com.example.slidemenumain.MainActivity"
+            android:name="csmsuse.pushing.beautyapp.MerchandiseActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.example.slidemenumain.CheckOutActivity"
+            android:name="csmsuse.pushing.beautyapp.CheckOutActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
         </activity>
          <activity
             android:theme="@style/AppTheme"
-            android:name="com.example.slidemenumain.SettingActivity"
+            android:name="csmsuse.pushing.beautyapp.SettingActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
         </activity>

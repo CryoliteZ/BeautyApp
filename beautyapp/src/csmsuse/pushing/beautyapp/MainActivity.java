@@ -1,10 +1,11 @@
-package com.example.slidemenumain;
+package csmsuse.pushing.beautyapp;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.example.slidemenumain.R;
 import com.yalantis.taurus.PullToRefreshView;
 
 import android.content.Context;
@@ -22,7 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class PullToRefreshActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     public static final int REFRESH_DELAY = 4000;
 
@@ -64,11 +65,11 @@ public class PullToRefreshActivity extends AppCompatActivity {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 				switch(position){
 				case 0:
-			        Intent intent = new Intent(PullToRefreshActivity.this, MainActivity.class);
+			        Intent intent = new Intent(MainActivity.this, MerchandiseActivity.class);
 			    	startActivity(intent);
 			    	break;
 			    case 2:
-			    	Intent intent2 = new Intent(PullToRefreshActivity.this, SettingActivity.class);
+			    	Intent intent2 = new Intent(MainActivity.this, SettingActivity.class);
 				    startActivity(intent2);
 				    break;
 				}
